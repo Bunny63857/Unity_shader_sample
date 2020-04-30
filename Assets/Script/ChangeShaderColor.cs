@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChangeShaderColor : MonoBehaviour
 {
+    private int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,10 @@ public class ChangeShaderColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        count++;
+        if (count % 120 == 0)
+        {
+            GetComponent<Renderer>().material.SetColor("_BaseColor", Color.green);
+        }
     }
 }

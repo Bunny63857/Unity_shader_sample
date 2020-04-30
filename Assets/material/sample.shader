@@ -1,5 +1,8 @@
 ﻿Shader "Custom/sample"
 {
+	Properties{
+		_BaseColor("Base Color",Color) = (1,1,1,1)
+	}
 	SubShader{
 	CGPROGRAM
 		#pragma surface surf Standard fullforwardshadows
