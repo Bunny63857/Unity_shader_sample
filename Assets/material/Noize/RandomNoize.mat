@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DrawCircle
-  m_Shader: {fileID: 4800000, guid: 42cc8680eb809a740943f458f9daae11, type: 3}
+  m_Name: RandomNoize
+  m_Shader: {fileID: 4800000, guid: c79b27055df662546833faf1e822c022, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
