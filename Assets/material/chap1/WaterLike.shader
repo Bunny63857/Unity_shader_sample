@@ -28,7 +28,7 @@
 			uv.y += 0.4*_Time;
 			fixed4 c= tex2D(_MainTex, uv);
 			o.Albedo = c;
-			o.Alpha = (c.r*0.3 + c.g*0.6 + c.b*0.1 < 0.2) ? 1 : 0.5;
+			o.Alpha = (c.r*0.3 + c.g*0.6 + c.b*0.1 < 0.2) ? 1 : 0.7;
         }
         ENDCG
     }
