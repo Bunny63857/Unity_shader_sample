@@ -31,7 +31,7 @@
 			//dot関数：内積，saturate関数：0~1にクランプ
 			float rim = 1 - saturate(dot(IN.viewDir, o.Normal));
 			//pow関数：xをy乗する
-			o.Emission = rimColor * pow(rim, 2.5);
+			o.Emission = rimColor * pow(rim, 3);
         }
         ENDCG
     }
