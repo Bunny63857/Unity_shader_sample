@@ -20,7 +20,7 @@
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
 			float dist = distance(fixed3(0, 0, 0), IN.worldPos);
-			float val = abs(sin(dist*3-_Time*100));
+			float val = abs(sin(dist*3+_Time*100));
 
 			if (val>0.98) {
 				o.Albedo = fixed4(1, 1, 1, 1);
