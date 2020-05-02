@@ -7,9 +7,9 @@
     SubShader
     {
 		Tags { "Queue" = "Transparent" }
-        //Tags { "RenderType"="Opaque" }
+        
         LOD 200
-
+		Cull off
         CGPROGRAM
         #pragma surface surf Standard alpha:fade
         #pragma target 3.0

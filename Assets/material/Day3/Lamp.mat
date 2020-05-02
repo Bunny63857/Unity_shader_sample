@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Circles
-  m_Shader: {fileID: 4800000, guid: cd985acaafc03704fbd45378b189e43c, type: 3}
+  m_Name: Lamp
+  m_Shader: {fileID: 4800000, guid: a7e86f067d3e3e145b9a0b8345f6491f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
