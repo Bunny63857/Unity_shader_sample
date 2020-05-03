@@ -1,4 +1,4 @@
-﻿Shader "Custom/FlagShader"
+﻿Shader "Custom/CircleWaveShader"
 {
 	Properties{
 		_MainTex("Albedo(RGB)",2D) = "white"{}
@@ -12,7 +12,7 @@
 		//Unityに頂点シェーダーを作成することを伝える
         #pragma surface surf Lambert vertex:vert
         #pragma target 3.0
-
+		const float Pi = 3.141592653589f;
         sampler2D _MainTex;
 
         struct Input
@@ -31,7 +31,9 @@
 		//appdata_full型のcolor変数から頂点カラーの情報を取り出してinputに入れる
 		void vert(inout appdata_full v,out Input o) {
 			UNITY_INITIALIZE_OUTPUT(Input, o);
-			float amp = 0.7*sin(_Time * 150 + v.vertex.x * 100);
+			float r = sqrt(pow(v.vertex.x, 2)+ pow(v.vertex.z, 2));
+			float amp = 0.3*sin(_Time * 100-r*2);
+			//float amp = 0.5*cos(_Time * 100 + v.vertex.x * 100);
 			v.vertex.xyz = float3(v.vertex.x, v.vertex.y + amp, v.vertex.z);
 		}
 
