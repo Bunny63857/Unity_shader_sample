@@ -27,7 +27,8 @@
             v2f vert (appdata_base v)
             {
                 v2f o;
-				_Displacement = 10-_Time*5;
+				_Displacement = 10-_Time*7;
+				abs(_Displacement);
 				clamp(_Displacement, 0, 10);
 				float3 n = UnityObjectToWorldNormal(v.normal);
 				o.pos = UnityObjectToClipPos(v.vertex)+float4(n*_Displacement,0);
@@ -38,7 +39,7 @@
             fixed4 frag (v2f i) : COLOR
             {
 				float4 red= float4(255.0 / 255,70.0 / 255,150.0 / 255,1);
-				float4 blue = float4(90.0 / 255,90.0 / 255,250.0 / 255,1);
+				float4 blue = float4(0 / 255,255.0 / 255,189.0 / 255,1);
 				return lerp(red, blue, i.worldPos.y*0.5);
             }
             ENDCG
